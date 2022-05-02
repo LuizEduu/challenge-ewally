@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  challenge_ewally:
+    command: npm run dev
+    restart: always
+    build: .
+    container_name: challenge-ewally
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/usr/app

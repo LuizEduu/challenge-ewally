@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Challenge_ewally documentation",
+    "description": "rest api responsável por buscar dados dos usuários, tratar e devolver da maneira correta.",
+    "version": "1.0.0",
+    "contatct": {
+      "email": "l.eduardo8316@gmail.com"
+    }
+  },
+  "paths": {
+    "/boleto": {
+      "get": {
+        "tags": ["boleto"],
+        "summary": "retorna os dados do boleto caso válido",
+        "description": "retorna os dados do boleto caso válido",
+        "parameters": [
+          {
+            "description": "digitos do boleto",
+            "in": "path",
+            "required": false,
+            "name": "ticket",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "return ticket data"
+          },
+          "400": {
+            "description": "Invalid request"
+          }
+        }
+      }
+    }
+  }
+}
