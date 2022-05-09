@@ -6,6 +6,7 @@ export interface ITicketModules {
   blockTwo: string
   blockThree: string
   blockFour?: string
+  ticket?: string
 }
 
 @injectable()
@@ -18,13 +19,14 @@ export class GetTicketBlocksUseCase {
       const blockTwo = ticket.slice(10, 21)
       const blockThree = ticket.slice(21, 32)
 
-      return { blockOne, blockTwo, blockThree }
+      return { blockOne, blockTwo, blockThree, ticket }
     }
 
-    const blockOne = ticket.slice(0, 11)
-    const blockTwo = ticket.slice(12, 23)
-    const blockThree = ticket.slice(24, 35)
-    const blockFour = ticket.slice(36, 47)
-    return { blockOne, blockTwo, blockThree, blockFour }
+    const blockOne = ticket.slice(0, 12)
+    const blockTwo = ticket.slice(12, 24)
+    const blockThree = ticket.slice(24, 36)
+    const blockFour = ticket.slice(36, 48)
+
+    return { blockOne, blockTwo, blockThree, blockFour, ticket }
   }
 }

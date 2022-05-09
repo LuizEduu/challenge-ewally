@@ -19,10 +19,10 @@ export class GetTicketVerifyDigitsUseCase {
       return { verifyDigitOne, verifyDigitTwo, verifyDigitThree }
     }
 
-    const verifyDigitOne = blockOne.substring(12, 12)
-    const verifyDigitTwo = blockTwo.substring(12, 12)
-    const verifyDigitThree = blockThree.substring(12, 12)
-    const verifyDigitFour = blockFour.substring(12, 12)
+    const verifyDigitOne = blockOne.substring(11)
+    const verifyDigitTwo = blockTwo.substring(11)
+    const verifyDigitThree = blockThree.substring(11)
+    const verifyDigitFour = blockFour.substring(11)
 
     return { verifyDigitOne, verifyDigitTwo, verifyDigitThree, verifyDigitFour }
   }
