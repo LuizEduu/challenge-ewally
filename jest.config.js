@@ -3,7 +3,10 @@ module.exports = {
     '!<rootDir>/src/**/*Controller.ts',
     '!<rootDir>/src/shared/**/*.ts',
     '!<rootDir>/src/types/*.ts',
-    '!<rootDir>/src/**/errors/**/*.ts'
+    '!<rootDir>/src/**/errors/**/*.ts',
+    '!<rootDir>/src/enums',
+    '!<rootDir>/src/@types',
+    '!<rootDir>/src/utils/ValidateTicketParameter.ts'
   ],
   coverageDirectory: 'coverage',
   coverageProvider: 'babel',

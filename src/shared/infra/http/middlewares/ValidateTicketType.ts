@@ -22,7 +22,6 @@ export default function validateTicketType (request: Request, response: Response
     request.ticket = {
       ticketNumber: ticket,
       ticketType: 'dealership'
-
     }
   }
 

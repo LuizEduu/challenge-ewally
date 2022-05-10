@@ -8,7 +8,7 @@ interface IResponse {
 
 export function BuildResultData (ticket: string, barCode: string, ticketType: string, expirationDate: Date): IResponse {
   const day = expirationDate.getDate() >= 10 ? expirationDate.getDate() : `0${expirationDate.getDate()}`
-  const month = expirationDate.getMonth() >= 10 ? expirationDate.getMonth() + 1 : `0${expirationDate.getMonth() + 1}`
+  const month = expirationDate.getMonth() >= 10 ? expirationDate.getMonth() : `0${expirationDate.getMonth() + 1}`
 
   return {
     barCode,

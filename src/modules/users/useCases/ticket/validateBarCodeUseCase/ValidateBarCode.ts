@@ -3,7 +3,7 @@ import { AppError } from '@/shared/errors/AppError'
 import { injectable } from 'tsyringe'
 
 @injectable()
-export class ValidateBarCode {
+export class ValidateBarCodeUseCase {
   execute (barCode: string, verifyDigit: string, barCodeType: string): boolean {
     if (barCodeType === TicketTypeEnum.bank) {
       let newBarCode = ''

@@ -31,30 +31,18 @@ com o projeto em execução para realizar uma request para a rota cadastrada é 
 * Insomnia -> [Insomnia](https://insomnia.rest/download).
 
 Após isso é necessário realizar uma requisição get para o endereço
-* [http://localhost:3333/users](http://localhost:3333/users).
-* A rota aceita os seguintes paramêtros opcionais:
-* **page** - número da pagina a ser buscada. caso não seja informado por padrão é 1
-* **limit** - número de registros por busca. caso não seja informado o padrão é 10. o limite por busca são de 15 registros
-* **sortBy** - realiza a ordenação dos dados por um campo. caso não seja informado o padrão é pelo firstName. lista de campos disponíveis para sort dos dados:
-  * id
-  * createdAt
-  * firstName
-  * email
-  * lastName
-* **order** - paramêtro para ordenação dos dados. caso não seja informado por padrão é asc. é aceito pela api ou **asc** ou **desc**
+* [http://localhost:3333/boleto/{ticketNumber}](http://localhost:3333/boleto/{ticketNumber}).
+* A rota aceita o seguinte path param:
+* **ticket number** - numero do boleto
+
 
 ou utilizando o próprio swagger configurado no projeto. para utilizar o swagger é necessário apenar acessar em qualquer navegador o endereço:
 
 * [swagger](http://localhost:3333/api-docs)
 
-Após acessar a interface do swagger é necessário apenar abrir a rota users cadastrada e clicar no botão execute
+Após acessar a interface do swagger é necessário apenar abrir a rota users cadastrada, clicar no botão try out informar o código do boleto e clicar no botão execute.
 
 ![Swagger da aplicação.](./images/swagger.png "Swagger")
-
-### Com o cURL
-Caso seja usuário de linux e tenha o cUrl instalado é possível realizar uma request utilizando o comando abaixo
-* **curl -X GET -G 'http://localhost:3333/users' -d page=1 -d limit=10**
-
 
 ## Testes da API
 Caso deseje executar os testes é necessário apenas acessar a raiz do projeto por qualquer terminal e executar o seguinte comando:
